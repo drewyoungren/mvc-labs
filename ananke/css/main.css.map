@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/drew/dev/labs-dev/mvc-labs",
+	"sourceRoot": "/Users/drew/Documents/repos/labs-dev/mvc-labs",
 	"sources": [
 		"ananke/css/main.css"
 	],

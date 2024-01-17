@@ -182,8 +182,8 @@
 </ul>
 <h2 id="dynamic-objects">Dynamic objects</h2>
 <p>Some objects in 3Demos can be manipulated in time by adding a <code>t</code> variable to the parameter expressions. Try this by appending a <code> * t</code> expressions to each component of one of your vectors. <strong>Warning</strong>: the object may disappear as <code>t</code> defaults to a value of 0. Use the slider to adjust this value and see the result of scaling your vector. Use the play controls to automate this. Then adjust the range on <code>t</code> to extend the amount of scaling (including negative values).</p>
-<p>Construct a new vector with the (convex combination) $$(1 - t) \vec v + t,\vec w.$$</p>
-<p><strong>Note</strong> you must use the <code>*</code> operator for multiplication. The parser does not interpret <code>5(4)</code> as 20, for example.</p>
+<p>Construct a new vector with the (convex combination) $$(1 - t) \vec v + t\vec w.$$</p>
+<p><strong>Note</strong> you must use the <code>*</code> operator for multiplication. The parser may not interpret <code>5(4)</code> as <code>20</code>, for example.</p>
 <h2 id="families-of-vectors">Families of vectors</h2>
 <p>As <code>t</code>-dependence can get us dynamic content, we can also visualize collections of vectors via a discrete parameter <code>n</code>. For instance, <a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=0.4&amp;obj0_params_b=0.2&amp;obj0_params_c=0.6&amp;obj0_params_x=n+%2F+4&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj0_params_n0=-4&amp;obj0_params_n1=4">see this example</a> of the same vector plotted at multiple positions on the $x$-axis. (We simply set the parameter $p_1 =$ <code>n / 4</code> and set the range on <code>n</code> from $-4$ to $4$.)</p>
 <p><img src="/mvc-labs/lab0/n-vecs.png" alt="A plot of the same vector at evenly spaces points along the x-axis"></p>
