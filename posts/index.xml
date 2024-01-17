@@ -15,12 +15,5 @@
       <guid>https://drew.youngren.nyc/mvc-labs/posts/lab0/</guid>
       <description>A first lab playing with points and vectors.</description>
     </item>
-    <item>
-      <title>Points &amp; Vectors</title>
-      <link>https://drew.youngren.nyc/mvc-labs/posts/third-post/</link>
-      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://drew.youngren.nyc/mvc-labs/posts/third-post/</guid>
-      <description>3Demos is a visualization tool developed for presentations in this class. Here, we use it to explore some basic properties of points, vectors, and vector operations.&#xA;Goals Visualize various linear combinations of vectors. Explore and utilize some dynamic features. Save a scene in. Linear Combinations Navigate to https://3demos.ctl.columbia.edu/. Click on Objects → Add Object → Vector Repeat once. Our scene now has 2 vectors with random components. We will refer to them as and , respectively.</description>
-    </item>
   </channel>
 </rss>
