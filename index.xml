@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Labs for APMA E2000 on MVC Labs</title>
+    <link>https://drew.youngren.nyc/mvc-labs/</link>
+    <description>Recent content in Labs for APMA E2000 on MVC Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2024 10:59:38 -0500</lastBuildDate>
+    <atom:link href="https://drew.youngren.nyc/mvc-labs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab 0</title>
+      <link>https://drew.youngren.nyc/mvc-labs/posts/lab0/</link>
+      <pubDate>Wed, 17 Jan 2024 10:59:38 -0500</pubDate>
+      <guid>https://drew.youngren.nyc/mvc-labs/posts/lab0/</guid>
+      <description>A first lab playing with points and vectors.</description>
+    </item>
+    <item>
+      <title>Points &amp; Vectors</title>
+      <link>https://drew.youngren.nyc/mvc-labs/posts/third-post/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://drew.youngren.nyc/mvc-labs/posts/third-post/</guid>
+      <description>3Demos is a visualization tool developed for presentations in this class. Here, we use it to explore some basic properties of points, vectors, and vector operations.&#xA;Goals Visualize various linear combinations of vectors. Explore and utilize some dynamic features. Save a scene in. Linear Combinations Navigate to https://3demos.ctl.columbia.edu/. Click on Objects → Add Object → Vector Repeat once. Our scene now has 2 vectors with random components. We will refer to them as and , respectively.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://drew.youngren.nyc/mvc-labs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://drew.youngren.nyc/mvc-labs/about/</guid>
+      <description>Something about the way.&#xA;Something, I said </description>
+    </item>
+  </channel>
+</rss>

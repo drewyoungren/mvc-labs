@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Lab 0 | MVC Labs</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="A first lab playing with points and vectors.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/mvc-labs/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://drew.youngren.nyc/mvc-labs/posts/lab0/">
+    
+
+    <meta property="og:title" content="Lab 0" />
+<meta property="og:description" content="A first lab playing with points and vectors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://drew.youngren.nyc/mvc-labs/posts/lab0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-17T10:59:38-05:00" />
+<meta property="article:modified_time" content="2024-01-17T10:59:38-05:00" />
+
+<meta itemprop="name" content="Lab 0">
+<meta itemprop="description" content="A first lab playing with points and vectors."><meta itemprop="datePublished" content="2024-01-17T10:59:38-05:00" />
+<meta itemprop="dateModified" content="2024-01-17T10:59:38-05:00" />
+<meta itemprop="wordCount" content="606">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Lab 0"/>
+<meta name="twitter:description" content="A first lab playing with points and vectors."/>
+
+	<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+ <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+  integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      macros: {
+        '\\R': '\\mathbb{R}',
+        '\\vec': '\\mathbf',
+      },
+    });
+  });
+</script>
+ 
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/mvc-labs/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        MVC Labs
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Lab 0</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-01-17T10:59:38-05:00">January 17, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="https://3demos.ctl.columbia.edu/">3Demos</a> is a visualization tool developed for presentations in this class. Here, we use it to explore some basic properties of points, vectors, and vector operations.</p>
+<h2 id="goals">Goals</h2>
+<ul>
+<li>Visualize various linear combinations of vectors.</li>
+<li>Explore and utilize some dynamic features.</li>
+<li>Save a scene in <code>json</code> format to be used later.</li>
+</ul>
+<h2 id="linear-combinations">Linear Combinations</h2>
+<ol>
+<li>Navigate to <!-- raw HTML omitted --><code>https://3demos.ctl.columbia.edu/</code><!-- raw HTML omitted -->.</li>
+<li>Click on <code>Objects</code> → <code>Add Object</code> → <code>Vector</code></li>
+<li>Repeat once.</li>
+</ol>
+<p><img src="/mvc-labs/lab0/add-vecs.gif" alt="A screenshot of adding a vector to a scene."></p>
+<p>Our scene now has 2 vectors with random components. We will refer to them as $\vec v$ and $\vec w$, respectively. Use the same procedure to add more vectors, and then directly manipulate the vectors&rsquo; components to plot the following vector expressions.</p>
+<ul>
+<li>$ \vec v + \vec w $</li>
+<li>$ \mathbf v - \mathbf w $ (Plot 2 copies of this, one at the origin and one at $\vec w$.)</li>
+<li>$ \frac{\mathbf v}{|\mathbf v|} $</li>
+<li>$ \frac12\mathbf v + \frac12\mathbf w $</li>
+<li>$ \frac14\mathbf v + \frac34\mathbf w $</li>
+<li>$\operatorname{proj}_{\mathbf v}\mathbf w $</li>
+</ul>
+<h2 id="dynamic-objects">Dynamic objects</h2>
+<p>Some objects in 3Demos can be manipulated in time by adding a <code>t</code> variable to the parameter expressions. Try this by appending a <code> * t</code> expressions to each component of one of your vectors. <strong>Warning</strong>: the object may disappear as <code>t</code> defaults to a value of 0. Use the slider to adjust this value and see the result of scaling your vector. Use the play controls to automate this. Then adjust the range on <code>t</code> to extend the amount of scaling (including negative values).</p>
+<p>Construct a new vector with the (convex combination) $$(1 - t) \vec v + t,\vec w.$$</p>
+<p><strong>Note</strong> you must use the <code>*</code> operator for multiplication. The parser does not interpret <code>5(4)</code> as 20, for example.</p>
+<h2 id="families-of-vectors">Families of vectors</h2>
+<p>As <code>t</code>-dependence can get us dynamic content, we can also visualize collections of vectors via a discrete parameter <code>n</code>. For instance, <a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=0.4&amp;obj0_params_b=0.2&amp;obj0_params_c=0.6&amp;obj0_params_x=n+%2F+4&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj0_params_n0=-4&amp;obj0_params_n1=4">see this example</a> of the same vector plotted at multiple positions on the $x$-axis. (We simply set the parameter $p_1 =$ <code>n / 4</code> and set the range on <code>n</code> from $-4$ to $4$.)</p>
+<p><img src="/mvc-labs/lab0/n-vecs.png" alt="A plot of the same vector at evenly spaces points along the x-axis"></p>
+<h3 id="unit-vectors">Unit vectors</h3>
+<p>This works in the vector components as well. For instance, suppose we want 10 evenly spaced unit vectors plotted at the origin in the $xy$-plane.</p>
+<blockquote>
+<p><strong>Theorem</strong> Every unit vector in $\R^2$ has the form $\langle \cos \theta, \sin \theta \rangle$ for some angle $\theta$.</p>
+</blockquote>
+<p>(I&rsquo;ll leave the reader to consider how this is true.) Thus, by dividing the interval $[0,2\pi)$, evenly, we can get the <a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=cos%28+n+*+pi+%2F+5%29&amp;obj0_params_b=sin%28n+*+pi+%2F+5%29&amp;obj0_params_c=0&amp;obj0_params_x=0&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj0_params_n0=0&amp;obj0_params_n1=9">family of unit vectors</a> mentioned above by using the components $x = $ <code>cos(n * pi / 5)</code>, $y = $ <code>sin(n * pi / 5)</code>, $z = $ <code>0</code>.</p>
+<p><strong>Note</strong> you can spell out the word <code>pi</code> for $\pi$.</p>
+<h2 id="make-a-scene">Make a Scene</h2>
+<p>Now that you have the basics down, combine <code>t</code> and <code>n</code> dependence to make some kind of visually interesting scene. Some examples (double-click on an arrow and press <code>P</code> to begin animation.):</p>
+<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=cos%28+n+*+pi+%2F+5+-+t%29+sin%28t%29&amp;obj0_params_b=sin%28n+*+pi+%2F+5+-+t%29+sin%28t%29&amp;obj0_params_c=cos%28t%29&amp;obj0_params_x=0&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=-pi+%2F+2&amp;obj0_params_t1=3+pi+%2F+2&amp;obj0_params_n0=0&amp;obj0_params_n1=9">Broken umbrella</a>:
+<img src="/mvc-labs/lab0/umbrella.gif" alt="Vectors opening and closing like an umbrella"></p>
+<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%23ec1313&amp;obj0_params_a=0&amp;obj0_params_b=cos%28t+*+pi+-+n+*+pi+%2F+8%29+%2F+2&amp;obj0_params_c=sin%28t+*+pi+-+n+*+pi+%2F+8%29+%2F+2&amp;obj0_params_x=%28%28n+%2F+4+%2B+t+%2F+2%29+%25+4%29+-+2&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=8&amp;obj0_params_n0=0&amp;obj0_params_n1=15">Auger</a>
+<img src="/mvc-labs/lab0/dril.gif" alt="Vectors spinning and traveling"></p>
+<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How+To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%23f71302&amp;obj0_params_a=sin%283+t+-+n*+pi+%2F+3%29&amp;obj0_params_b=-cos%283+t++-+n+*+pi+%2F+3%29&amp;obj0_params_c=0&amp;obj0_params_x=cos%28t++-+n+*+pi+%2F+3%29&amp;obj0_params_y=sin%28t+-+n+*+pi+%2F+3%29&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=2+pi&amp;obj0_params_n0=0&amp;obj0_params_n1=5">Iris</a>
+<img src="/mvc-labs/lab0/lens.gif" alt="Vectors parading about the z-axis"></p>
+<p>You may work in groups of up to three (3) students. For full credit, your scene must:</p>
+<ul>
+<li>Start from scratch. Do not simply manipulate one of the above.</li>
+<li>Include set of multiple vectors that change location (e.g., using convex combinations).</li>
+<li>At least one vector that changes direction <strong>without</strong> changing magnitude.</li>
+</ul>
+<p>You will not be judged on artistry, but it can&rsquo;t hurt.</p>
+<h3 id="how-to-submit">How to Submit</h3>
+<ul>
+<li>Save your scene as a <code>json</code> file.</li>
+<li>Navigate to <a href="https://courseworks2.columbia.edu/">Courseworks</a></li>
+<li>Go to the People menu item and look for the Lab0 tab.</li>
+<li>You should be able to sign up/invite/join a group with up to 3 people.</li>
+<li>Go to Assignments $\rightarrow$ Lab 0.</li>
+<li>Start assignment and submit the <code>json</code> file saved above. Only one group member needs to do this step.</li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://drew.youngren.nyc/mvc-labs/" >
+    &copy;  MVC Labs 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

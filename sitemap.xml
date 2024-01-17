@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://drew.youngren.nyc/mvc-labs/posts/lab0/</loc>
+    <lastmod>2024-01-17T10:59:38-05:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/</loc>
+    <lastmod>2024-01-17T10:59:38-05:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/posts/</loc>
+    <lastmod>2024-01-17T10:59:38-05:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/categories/</loc>
+    <lastmod>2024-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/categories/lab/</loc>
+    <lastmod>2024-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/categories/mvc/</loc>
+    <lastmod>2024-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/posts/third-post/</loc>
+    <lastmod>2024-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/about/</loc>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/tags/</loc>
+  </url>
+</urlset>
