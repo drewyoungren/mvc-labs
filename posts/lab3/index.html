@@ -6,9 +6,7 @@
     
     <title>Lab 3 - Circles and Curvature | MVC Labs</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="You may work in groups of up to 3 students.
-Goals In this activity, you will:
-Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?">
+    <meta name="description" content="Constructing an osculating circle from scratch.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -36,24 +34,18 @@ Parametrize a circle embedded in $\R^3$. Create curves via different parametriza
     
 
     <meta property="og:title" content="Lab 3 - Circles and Curvature" />
-<meta property="og:description" content="You may work in groups of up to 3 students.
-Goals In this activity, you will:
-Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?" />
+<meta property="og:description" content="Constructing an osculating circle from scratch." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://drew.youngren.nyc/mvc-labs/posts/lab3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-08T16:09:48-05:00" />
 <meta property="article:modified_time" content="2024-02-08T16:09:48-05:00" />
 
 <meta itemprop="name" content="Lab 3 - Circles and Curvature">
-<meta itemprop="description" content="You may work in groups of up to 3 students.
-Goals In this activity, you will:
-Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?"><meta itemprop="datePublished" content="2024-02-08T16:09:48-05:00" />
+<meta itemprop="description" content="Constructing an osculating circle from scratch."><meta itemprop="datePublished" content="2024-02-08T16:09:48-05:00" />
 <meta itemprop="dateModified" content="2024-02-08T16:09:48-05:00" />
-<meta itemprop="wordCount" content="582">
+<meta itemprop="wordCount" content="587">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Lab 3 - Circles and Curvature"/>
-<meta name="twitter:description" content="You may work in groups of up to 3 students.
-Goals In this activity, you will:
-Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?"/>
+<meta name="twitter:description" content="Constructing an osculating circle from scratch."/>
 
 	<link
   rel="stylesheet"
@@ -247,7 +239,7 @@ But what about embedding a circle in $\R^3$? This is trivial if we just want the
 <li>Compute the unit tangent vector $\vec v = \vec T(a) = \frac{\vec r&rsquo;(a)}{|\vec r&rsquo;(a)|}$.</li>
 <li>Compute a direction orthogonal to this in the osculating plane. This is $$\vec w = \frac{\vec T&rsquo;(a)}{|\vec T&rsquo;(a)|}$$ How do we know this is orthogonal to $\vec v$?</li>
 <li>Compute the curvature $\kappa$ at $\vec r(a)$.</li>
-<li>The osculating circle has radius $R = \frac{1}{\kappa}$ and center $\vec p + R\vec w$. Use this to plot it <strong>as its own curve</strong>.</li>
+<li>The osculating circle has radius $R = \frac{1}{\kappa}$ and center $\vec p + R\vec w$. Use this to plot it <strong>as its own curve</strong> (use <code>Add Object+</code> $\to$ <code>curve</code>).</li>
 </ol>
 <p>Once plotted, save your whole scene as a <code>.json</code> file via the download button <img src="/mvc-labs/lab3/download_button.png" alt="download button"> and upload it (with the names and UNIs of your mates) via <a href="https://forms.gle/nQKikRnNUCs33cCP8" target="_blank" rel="noopener">this form.</a>
 </p>

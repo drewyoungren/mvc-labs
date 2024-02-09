@@ -13,7 +13,7 @@
       <link>https://drew.youngren.nyc/mvc-labs/posts/lab3/</link>
       <pubDate>Thu, 08 Feb 2024 16:09:48 -0500</pubDate>
       <guid>https://drew.youngren.nyc/mvc-labs/posts/lab3/</guid>
-      <description>You may work in groups of up to 3 students.&#xA;Goals In this activity, you will:&#xA;Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &amp;ldquo;by hand.&amp;rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) + h, R\sin(t) + k \rangle$$ But what about embedding a circle in $\R^3$?</description>
+      <description>Constructing an osculating circle from scratch.</description>
     </item>
     <item>
       <title>Lab 0 - Vectors &amp; Combinations</title>
