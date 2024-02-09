@@ -189,7 +189,7 @@
 </ul>
 <h2 id="circles">Circles</h2>
 <p>We know that we can parametrize the unit circle in $\R^2$ via
-$\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) + h, R\sin(t) + k \rangle$$
+$\langle \cos t, \sin t \rangle$ and adjust the radius and center via dilation and translation: $$\mathbf r(t) = \langle R\cos(t), R\sin(t) \rangle + \langle h, k \rangle$$
 But what about embedding a circle in $\R^3$? This is trivial if we just want the circle along one of the <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=curve&amp;obj0_color=%230d0887&amp;obj0_params_a=0&amp;obj0_params_b=2*pi&amp;obj0_params_x=cos%28t%29&amp;obj0_params_y=sin%28t%29&amp;obj0_params_z=0&amp;obj1_kind=curve&amp;obj1_color=%23dc5e66&amp;obj1_params_a=0&amp;obj1_params_b=2*pi&amp;obj1_params_x=cos%28t%29%2F2&#43;%2B&#43;1&amp;obj1_params_y=0&amp;obj1_params_z=sin%28t%29&#43;%2F&#43;2&amp;obj2_kind=curve&amp;obj2_color=%235801a5&amp;obj2_params_a=0&amp;obj2_params_b=2*pi&amp;obj2_params_x=0&amp;obj2_params_y=2&#43;sin%28t%29&#43;%2B&#43;1.5&amp;obj2_params_z=2&#43;cos%28t%29&#43;%2B&#43;.5" target="_blank" rel="noopener">coordinate planes</a>
  by inserting a $0$ in the appropriate coordinate, like $$\cos (t)\,\vec i + \sin (t)\,\vec k$$ would give the unit circle in the $xz$-plane.</p>
 <p>Inspired we could try this with two other vectors.</p>
@@ -232,8 +232,8 @@ But what about embedding a circle in $\R^3$? This is trivial if we just want the
 </ol>
 <h2 id="complete-the-circle">Complete the circle.</h2>
 <p>After choosing a curve $\vec r(t)$ and choosing a particular point $t = a$, compute a parametrization of the osculating circle.</p>
-<p>_You can use <a href="http://wolframalpha.com/" target="_blank" rel="noopener">Wolfram Alpha</a>
- or other CAS to aid in the computations. _</p>
+<p><em>You can use <a href="http://wolframalpha.com/" target="_blank" rel="noopener">Wolfram Alpha</a>
+ or other CAS to aid in the computations.</em></p>
 <ol>
 <li>Compute $\vec p = \vec r(a)$.</li>
 <li>Compute the unit tangent vector $\vec v = \vec T(a) = \frac{\vec r&rsquo;(a)}{|\vec r&rsquo;(a)|}$.</li>
