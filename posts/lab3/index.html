@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Lab 3 - Circles and Curvature | MVC Labs</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="You may work in groups of up to 3 students.
+Goals In this activity, you will:
+Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/mvc-labs/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://drew.youngren.nyc/mvc-labs/posts/lab3/">
+    
+
+    <meta property="og:title" content="Lab 3 - Circles and Curvature" />
+<meta property="og:description" content="You may work in groups of up to 3 students.
+Goals In this activity, you will:
+Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://drew.youngren.nyc/mvc-labs/posts/lab3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-08T16:09:48-05:00" />
+<meta property="article:modified_time" content="2024-02-08T16:09:48-05:00" />
+
+<meta itemprop="name" content="Lab 3 - Circles and Curvature">
+<meta itemprop="description" content="You may work in groups of up to 3 students.
+Goals In this activity, you will:
+Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?"><meta itemprop="datePublished" content="2024-02-08T16:09:48-05:00" />
+<meta itemprop="dateModified" content="2024-02-08T16:09:48-05:00" />
+<meta itemprop="wordCount" content="582">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Lab 3 - Circles and Curvature"/>
+<meta name="twitter:description" content="You may work in groups of up to 3 students.
+Goals In this activity, you will:
+Parametrize a circle embedded in $\R^3$. Create curves via different parametrizations. Practice computing curvature. Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo; Circles We know that we can parametrize the unit circle in $\R^2$ via $\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) &#43; h, R\sin(t) &#43; k \rangle$$ But what about embedding a circle in $\R^3$?"/>
+
+	<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+ <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+  integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      macros: {
+        '\\R': '\\mathbb{R}',
+        '\\vec': '\\mathbf',
+      },
+    });
+  });
+</script>
+ 
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://drew.youngren.nyc/mvc-labs/coaster.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/mvc-labs/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        MVC Labs
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/mvc-labs/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Lab 3 - Circles and Curvature</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Lab 3 - Circles and Curvature</h1>
+      
+      <p class="tracked">
+        By <strong>Drew C Youngren</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-02-08T16:09:48-05:00">February 8, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>You may work in groups of up to 3 students.</p>
+<h2 id="goals">Goals</h2>
+<p>In this activity, you will:</p>
+<ul>
+<li>Parametrize a circle embedded in $\R^3$.</li>
+<li>Create curves via different parametrizations.</li>
+<li>Practice computing curvature.</li>
+<li>Synthesize the above to plot an osculating circle &ldquo;by hand.&rdquo;</li>
+</ul>
+<h2 id="circles">Circles</h2>
+<p>We know that we can parametrize the unit circle in $\R^2$ via
+$\langle \cos t, \sin t \rangle$ and adjust the radius and center via dialation and translation: $$\mathbf r(t) = \langle R\cos(t) + h, R\sin(t) + k \rangle$$
+But what about embedding a circle in $\R^3$? This is trivial if we just want the circle along one of the <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=curve&amp;obj0_color=%230d0887&amp;obj0_params_a=0&amp;obj0_params_b=2*pi&amp;obj0_params_x=cos%28t%29&amp;obj0_params_y=sin%28t%29&amp;obj0_params_z=0&amp;obj1_kind=curve&amp;obj1_color=%23dc5e66&amp;obj1_params_a=0&amp;obj1_params_b=2*pi&amp;obj1_params_x=cos%28t%29%2F2&#43;%2B&#43;1&amp;obj1_params_y=0&amp;obj1_params_z=sin%28t%29&#43;%2F&#43;2&amp;obj2_kind=curve&amp;obj2_color=%235801a5&amp;obj2_params_a=0&amp;obj2_params_b=2*pi&amp;obj2_params_x=0&amp;obj2_params_y=2&#43;sin%28t%29&#43;%2B&#43;1.5&amp;obj2_params_z=2&#43;cos%28t%29&#43;%2B&#43;.5" target="_blank" rel="noopener">coordinate planes</a>
+ by inserting a $0$ in the appropriate coordinate, like $$\cos (t)\,\vec i + \sin (t)\,\vec k$$ would give the unit circle in the $xz$-plane.</p>
+<p>Inspired we could try this with two other vectors.</p>
+<h3 id="warm-up">Warm up</h3>
+<ol>
+<li>Open <a href="https://3demos.ctl.columbia.edu/" target="_blank" rel="noopener">3Demos</a>
+.</li>
+<li>Click <code>Objects</code> $\to$ <code>Add object+</code> and add two new vectors. Refer to them as $\vec v$ and $\vec w$.</li>
+<li>Add a <code>curve</code> via the same method, but make the component functions those of $$\cos (t)\,\vec v + \sin (t) \, \vec w$$ <img src="/mvc-labs/lab3/slant-clock.png" alt="askew circle"></li>
+<li>Is the result a circle? Very unlikely. Swap $\vec v$ and $\vec w$ for a new pair (you can choose them arbitrarily, but not $\vec i$, $\vec j$, or $\vec k$) that are
+<ul>
+<li><strong>orthogonal</strong> and</li>
+<li><strong>unit vectors</strong>.</li>
+</ul>
+</li>
+<li>Repeat step 3. <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=-6%2F%285*sqrt%285%29%29&amp;obj0_params_b=5%2F%285*sqrt%285%29%29&amp;obj0_params_c=-8%2F%285*sqrt%285%29%29&amp;obj0_params_x=0&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj1_kind=vector&amp;obj1_color=%23dc5e66&amp;obj1_params_a=1%2F3&amp;obj1_params_b=-2%2F3&amp;obj1_params_c=-2%2F3&amp;obj1_params_x=0&amp;obj1_params_y=0&amp;obj1_params_z=0&amp;obj1_params_t0=0&amp;obj1_params_t1=1&amp;obj2_kind=curve&amp;obj2_color=%235801a5&amp;obj2_params_a=0&amp;obj2_params_b=2*pi&amp;obj2_params_x=%28-6%2F%285*sqrt%285%29%29%29*cos%28t%29&#43;%2B&#43;%281%2F3%29*sin%28t%29&amp;obj2_params_y=%285%2F%285*sqrt%285%29%29%29*cos%28t%29&#43;%2B&#43;%28-2%2F3%29*sin%28t%29&amp;obj2_params_z=%28-8%2F%285*sqrt%285%29%29%29*cos%28t%29&#43;%2B&#43;%28-2%2F3%29*sin%28t%29" target="_blank" rel="noopener">See example.</a>
+ <img src="/mvc-labs/lab3/circle-clock.png" alt="Spruced up circle"></li>
+</ol>
+<p>You should now be able to parametrize any circle you like as long as you can find an <em>orthonormal</em> pair of vectors like these in the plane it lies in. That is, a circle centered at $\vec u$, with radius $R$ in the plane spanned by $\vec v$ and $\vec w$ (orthogonal unit vectors) has parametrization $$\vec r(t) = \vec u + R\cos(t)\vec v + R\sin(t)\vec w .$$</p>
+<!-- raw HTML omitted -->
+<h2 id="make-a-roller-coaster">Make a Roller Coaster</h2>
+<p>Next choose a curve to work with. It needn&rsquo;t resemble a <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0.46&amp;showPanel=false&amp;grid=true&amp;obj0_kind=curve&amp;obj0_color=%236a0b0b&amp;obj0_params_a=0&amp;obj0_params_b=2*pi&amp;obj0_params_x=2&#43;cos%282&#43;t&#43;-&#43;pi&#43;%2F&#43;2%29&#43;%2B&#43;1&amp;obj0_params_y=3&#43;sin%28&#43;t&#43;-&#43;pi&#43;%2F&#43;2%29&#43;%2B&#43;2&amp;obj0_params_z=1.15&#43;*&#43;cos%287*t&#43;-&#43;pi%2F2%29&#43;%28exp%28-%28%28t&#43;-&#43;pi%29&#43;%2F&#43;2%29%5E2&#43;%29%29&#43;%2B&#43;1" target="_blank" rel="noopener">roller coaster</a>
+, though that was the inspiration. <img src="/mvc-labs/coaster.png" alt="coaster"></p>
+<p>It does have to:</p>
+<ul>
+<li>be smoothly differentiable.</li>
+<li>have nonconstant curvature.</li>
+<li><strong>not</strong> lie in a single plane.</li>
+</ul>
+<p>One idea is to try a <a href="https://mathworld.wolfram.com/LissajousCurve.html" target="_blank" rel="noopener">Lissajous</a>
+ curve (in 3D). That is, make each component in the form $\cos(k t)$ or $\sin(k t)$ for different frequencies $k$.</p>
+<p>Make something that looks interesting but with a not too complicated formula.</p>
+<h3 id="visualize-the-curvature">Visualize the curvature</h3>
+<ol>
+<li>Next, plot your curve in <a href="https://3demos.ctl.columbia.edu/" target="_blank" rel="noopener">3Demos</a>
+.</li>
+<li>In the <code>Objects</code> panel, turn on the <code>Frame</code> option and hit the play button to observe the position, first, and second derivatives. <img src="/mvc-labs/lab3/turn_on_frame.png" alt="turn on frame and trace"></li>
+<li>[Optional] You can trace it out at unit speed (i.e., parametrize by arc length) by using the appropriate switch.</li>
+<li>Turn on the <code>Osculating circle</code> option and pause at a point where it looks cool.</li>
+</ol>
+<h2 id="complete-the-circle">Complete the circle.</h2>
+<p>After choosing a curve $\vec r(t)$ and choosing a particular point $t = a$, compute a parametrization of the osculating circle.</p>
+<p>_You can use <a href="http://wolframalpha.com/" target="_blank" rel="noopener">Wolfram Alpha</a>
+ or other CAS to aid in the computations. _</p>
+<ol>
+<li>Compute $\vec p = \vec r(a)$.</li>
+<li>Compute the unit tangent vector $\vec v = \vec T(a) = \frac{\vec r&rsquo;(a)}{|\vec r&rsquo;(a)|}$.</li>
+<li>Compute a direction orthogonal to this in the osculating plane. This is $$\vec w = \frac{\vec T&rsquo;(a)}{|\vec T&rsquo;(a)|}$$ How do we know this is orthogonal to $\vec v$?</li>
+<li>Compute the curvature $\kappa$ at $\vec r(a)$.</li>
+<li>The osculating circle has radius $R = \frac{1}{\kappa}$ and center $\vec p + R\vec w$. Use this to plot it <strong>as its own curve</strong>.</li>
+</ol>
+<p>Once plotted, save your whole scene as a <code>.json</code> file via the download button <img src="/mvc-labs/lab3/download_button.png" alt="download button"> and upload it (with the names and UNIs of your mates) via <a href="https://forms.gle/nQKikRnNUCs33cCP8" target="_blank" rel="noopener">this form.</a>
+</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://drew.youngren.nyc/mvc-labs/" >
+    &copy;  MVC Labs 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

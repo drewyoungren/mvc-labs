@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://drew.youngren.nyc/mvc-labs/posts/lab0/</loc>
-    <lastmod>2024-01-17T10:59:38-05:00</lastmod>
+    <loc>https://drew.youngren.nyc/mvc-labs/posts/lab3/</loc>
+    <lastmod>2024-02-08T16:09:48-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://drew.youngren.nyc/mvc-labs/</loc>
-    <lastmod>2024-01-17T10:59:38-05:00</lastmod>
+    <lastmod>2024-02-08T16:09:48-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://drew.youngren.nyc/mvc-labs/posts/</loc>
+    <lastmod>2024-02-08T16:09:48-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://drew.youngren.nyc/mvc-labs/posts/lab0/</loc>
     <lastmod>2024-01-17T10:59:38-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
