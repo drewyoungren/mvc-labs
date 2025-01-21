@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Labs for APMA E2000 on MVC Labs</title>
-    <link>https://drew.youngren.nyc/mvc-labs/</link>
+    <link>http://localhost:1313/mvc-labs/</link>
     <description>Recent content in Labs for APMA E2000 on MVC Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Feb 2024 16:09:48 -0500</lastBuildDate>
-    <atom:link href="https://drew.youngren.nyc/mvc-labs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/mvc-labs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lab 3 - Circles and Curvature</title>
-      <link>https://drew.youngren.nyc/mvc-labs/posts/lab3/</link>
+      <link>http://localhost:1313/mvc-labs/posts/lab3/</link>
       <pubDate>Thu, 08 Feb 2024 16:09:48 -0500</pubDate>
-      <guid>https://drew.youngren.nyc/mvc-labs/posts/lab3/</guid>
+      <guid>http://localhost:1313/mvc-labs/posts/lab3/</guid>
       <description>Constructing an osculating circle from scratch.</description>
     </item>
     <item>
       <title>Lab 0 - Vectors &amp; Combinations</title>
-      <link>https://drew.youngren.nyc/mvc-labs/posts/lab0/</link>
+      <link>http://localhost:1313/mvc-labs/posts/lab0/</link>
       <pubDate>Wed, 17 Jan 2024 10:59:38 -0500</pubDate>
-      <guid>https://drew.youngren.nyc/mvc-labs/posts/lab0/</guid>
+      <guid>http://localhost:1313/mvc-labs/posts/lab0/</guid>
       <description>A first lab playing with points and vectors.</description>
     </item>
     <item>
+      <title>Points &amp; Vectors</title>
+      <link>http://localhost:1313/mvc-labs/posts/third-post/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mvc-labs/posts/third-post/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://3demos.ctl.columbia.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3Demos&lt;/a&gt;&#xA; is a visualization tool developed for presentations in this class. Here, we use it to explore some basic properties of points, vectors, and vector operations.&lt;/p&gt;&#xA;&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Visualize various linear combinations of vectors.&lt;/li&gt;&#xA;&lt;li&gt;Explore and utilize some dynamic features.&lt;/li&gt;&#xA;&lt;li&gt;Save a scene in.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;linear-combinations&#34;&gt;Linear Combinations&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Navigate to &lt;!-- raw HTML omitted --&gt;&lt;code&gt;https://3demos.ctl.columbia.edu/&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Click on &lt;code&gt;Objects&lt;/code&gt; → &lt;code&gt;Add Object&lt;/code&gt; → &lt;code&gt;Vector&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Repeat once.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;add-vecs.gif&#34; alt=&#34;A screenshot of adding a vector to a scene.&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>About</title>
-      <link>https://drew.youngren.nyc/mvc-labs/about/</link>
+      <link>http://localhost:1313/mvc-labs/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://drew.youngren.nyc/mvc-labs/about/</guid>
+      <guid>http://localhost:1313/mvc-labs/about/</guid>
       <description>&lt;p&gt;Something about the way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;something-i-said&#34;&gt;Something, I said&lt;/h2&gt;</description>
     </item>
   </channel>
