@@ -4,7 +4,7 @@
     <title>Labs for APMA E2000 on MVC Labs</title>
     <link>https://drew.youngren.nyc/mvc-labs/</link>
     <description>Recent content in Labs for APMA E2000 on MVC Labs</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Feb 2024 16:09:48 -0500</lastBuildDate>
     <atom:link href="https://drew.youngren.nyc/mvc-labs/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,7 @@
       <link>https://drew.youngren.nyc/mvc-labs/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://drew.youngren.nyc/mvc-labs/about/</guid>
-      <description>Something about the way.&#xA;Something, I said </description>
+      <description>&lt;p&gt;Something about the way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;something-i-said&#34;&gt;Something, I said&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>

@@ -7,12 +7,15 @@
     <title>Lab 0 - Vectors &amp; Combinations | MVC Labs</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="A first lab playing with points and vectors.">
-    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Hugo 0.140.2">
     
     
     
     
       <meta name="robots" content="noindex, nofollow">
+    
+    
+      <meta name="author" content = "Drew C Youngren">
     
 
     
@@ -33,19 +36,24 @@
       <link rel="canonical" href="https://drew.youngren.nyc/mvc-labs/posts/lab0/">
     
 
-    <meta property="og:title" content="Lab 0 - Vectors &amp; Combinations" />
-<meta property="og:description" content="A first lab playing with points and vectors." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://drew.youngren.nyc/mvc-labs/posts/lab0/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-17T10:59:38-05:00" />
-<meta property="article:modified_time" content="2024-01-17T10:59:38-05:00" />
+    <meta property="og:url" content="https://drew.youngren.nyc/mvc-labs/posts/lab0/">
+  <meta property="og:site_name" content="MVC Labs">
+  <meta property="og:title" content="Lab 0 - Vectors & Combinations">
+  <meta property="og:description" content="A first lab playing with points and vectors.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-17T10:59:38-05:00">
+    <meta property="article:modified_time" content="2024-01-17T10:59:38-05:00">
 
-<meta itemprop="name" content="Lab 0 - Vectors &amp; Combinations">
-<meta itemprop="description" content="A first lab playing with points and vectors."><meta itemprop="datePublished" content="2024-01-17T10:59:38-05:00" />
-<meta itemprop="dateModified" content="2024-01-17T10:59:38-05:00" />
-<meta itemprop="wordCount" content="613">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Lab 0 - Vectors &amp; Combinations"/>
-<meta name="twitter:description" content="A first lab playing with points and vectors."/>
+  <meta itemprop="name" content="Lab 0 - Vectors & Combinations">
+  <meta itemprop="description" content="A first lab playing with points and vectors.">
+  <meta itemprop="datePublished" content="2024-01-17T10:59:38-05:00">
+  <meta itemprop="dateModified" content="2024-01-17T10:59:38-05:00">
+  <meta itemprop="wordCount" content="623">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lab 0 - Vectors & Combinations">
+  <meta name="twitter:description" content="A first lab playing with points and vectors.">
 
 	<link
   rel="stylesheet"
@@ -148,20 +156,11 @@
           
         Posts
       </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
+           
+  
+<div id="sharing" class="mt3 ananke-socials">
+  
+</div>
 
 
       <h1 class="f1 athelas mt3 mb1">Lab 0 - Vectors &amp; Combinations</h1>
@@ -207,7 +206,7 @@
 <p>Construct a new vector with the (convex combination) $$(1 - t) \vec v + t\vec w.$$</p>
 <p><strong>Note</strong> you must use the <code>*</code> operator for multiplication. The parser may not interpret <code>5(4)</code> as <code>20</code>, for example.</p>
 <h2 id="families-of-vectors">Families of vectors</h2>
-<p>As <code>t</code>-dependence can get us dynamic content, we can also visualize collections of vectors via a discrete parameter <code>n</code>. For instance, <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=0.4&amp;obj0_params_b=0.2&amp;obj0_params_c=0.6&amp;obj0_params_x=n&#43;%2F&#43;4&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj0_params_n0=-4&amp;obj0_params_n1=4" target="_blank" rel="noopener">see this example</a>
+<p>As <code>t</code>-dependence can get us dynamic content, we can also visualize collections of vectors via a discrete parameter <code>n</code>. For instance, <a href="https://3demos.ctl.columbia.edu/?Y3VycmVudENoYXB0ZXI9SG93K1RvJnNjYWxlPTAmc2hvd1BhbmVsPWZhbHNlJm9iajBfa2luZD12ZWN0b3Imb2JqMF9jb2xvcj0lMjMxMTAwZmYmb2JqMF9wYXJhbXNfYT0wLjQmb2JqMF9wYXJhbXNfYj0wLjImb2JqMF9wYXJhbXNfYz0wLjYmb2JqMF9wYXJhbXNfeD1uKyUyRis0Jm9iajBfcGFyYW1zX3k9MCZvYmowX3BhcmFtc196PTAmb2JqMF9wYXJhbXNfdDA9MCZvYmowX3BhcmFtc190MT0xJm9iajBfcGFyYW1zX24wPS00Jm9iajBfcGFyYW1zX24xPTQ=" target="_blank" rel="noopener">see this example</a>
  of the same vector plotted at multiple positions on the $x$-axis. (We simply set the parameter $p_1 =$ <code>n / 4</code> and set the range on <code>n</code> from $-4$ to $4$.)</p>
 <p><img src="/mvc-labs/lab0/n-vecs.png" alt="A plot of the same vector at evenly spaces points along the x-axis"></p>
 <h3 id="unit-vectors">Unit vectors</h3>
@@ -215,18 +214,18 @@
 <blockquote>
 <p><strong>Theorem</strong> Every unit vector in $\R^2$ has the form $\langle \cos \theta, \sin \theta \rangle$ for some angle $\theta$.</p>
 </blockquote>
-<p>(I&rsquo;ll leave the reader to consider how this is true.) Thus, by dividing the interval $[0,2\pi)$, evenly, we can get the <a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=true&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_params_a=cos%28&#43;n&#43;*&#43;pi&#43;%2F&#43;5%29&amp;obj0_params_b=sin%28n&#43;*&#43;pi&#43;%2F&#43;5%29&amp;obj0_params_c=0&amp;obj0_params_x=0&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=1&amp;obj0_params_n0=0&amp;obj0_params_n1=9" target="_blank" rel="noopener">family of unit vectors</a>
+<p>(I&rsquo;ll leave the reader to consider how this is true.) Thus, by dividing the interval $[0,2\pi)$, evenly, we can get the <a href="https://3demos.ctl.columbia.edu/?Y3VycmVudENoYXB0ZXI9SG93K1RvJnNjYWxlPTAmc2hvd1BhbmVsPWZhbHNlJm9iajBfa2luZD12ZWN0b3Imb2JqMF9jb2xvcj0lMjMwZDA4ODcmb2JqMF9wYXJhbXNfYT1jb3MlMjgrbisqK3BpKyUyRis1JTI5Jm9iajBfcGFyYW1zX2I9c2luJTI4bisqK3BpKyUyRis1JTI5Jm9iajBfcGFyYW1zX2M9MCZvYmowX3BhcmFtc194PTAmb2JqMF9wYXJhbXNfeT0wJm9iajBfcGFyYW1zX3o9MCZvYmowX3BhcmFtc190MD0wJm9iajBfcGFyYW1zX3QxPTEmb2JqMF9wYXJhbXNfbjA9MCZvYmowX3BhcmFtc19uMT05" target="_blank" rel="noopener">family of unit vectors</a>
  mentioned above by using the components $x = $ <code>cos(n * pi / 5)</code>, $y = $ <code>sin(n * pi / 5)</code>, $z = $ <code>0</code>.</p>
 <p><strong>Note</strong> you can spell out the word <code>pi</code> for $\pi$.</p>
 <h2 id="make-a-scene">Make a Scene</h2>
 <p>Now that you have the basics down, combine <code>t</code> and <code>n</code> dependence to make some kind of visually interesting scene. Some examples (double-click on an arrow and press <code>P</code> to begin animation.):</p>
-<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%230d0887&amp;obj0_animation=true&amp;obj0_params_a=cos%28&#43;n&#43;*&#43;pi&#43;%2F&#43;5&#43;-&#43;t%29&#43;sin%28t%29&amp;obj0_params_b=sin%28n&#43;*&#43;pi&#43;%2F&#43;5&#43;-&#43;t%29&#43;sin%28t%29&amp;obj0_params_c=cos%28t%29&amp;obj0_params_x=0&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=-pi&#43;%2F&#43;2&amp;obj0_params_t1=3&#43;pi&#43;%2F&#43;2&amp;obj0_params_n0=0&amp;obj0_params_n1=9" target="_blank" rel="noopener">Broken umbrella</a>
+<p><a href="https://3demos.ctl.columbia.edu/?Y3VycmVudENoYXB0ZXI9SG93K1RvJnNjYWxlPTAmc2hvd1BhbmVsPWZhbHNlJm9iajBfa2luZD12ZWN0b3Imb2JqMF9jb2xvcj0lMjMwZDA4ODcmb2JqMF9hbmltYXRpb249dHJ1ZSZvYmowX3BhcmFtc19hPWNvcyUyOCtuKyorcGkrJTJGKzUrLSt0JTI5K3NpbiUyOHQlMjkmb2JqMF9wYXJhbXNfYj1zaW4lMjhuKyorcGkrJTJGKzUrLSt0JTI5K3NpbiUyOHQlMjkmb2JqMF9wYXJhbXNfYz1jb3MlMjh0JTI5Jm9iajBfcGFyYW1zX3g9MCZvYmowX3BhcmFtc195PTAmb2JqMF9wYXJhbXNfej0wJm9iajBfcGFyYW1zX3QwPS1waSslMkYrMiZvYmowX3BhcmFtc190MT0zK3BpKyUyRisyJm9iajBfcGFyYW1zX24wPTAmb2JqMF9wYXJhbXNfbjE9OQ==" target="_blank" rel="noopener">Broken umbrella</a>
 :
 <img src="/mvc-labs/lab0/umbrella.gif" alt="Vectors opening and closing like an umbrella"></p>
-<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%23ec1313&amp;obj0_animation=true&amp;obj0_params_a=0&amp;obj0_params_b=cos%28t&#43;*&#43;pi&#43;-&#43;n&#43;*&#43;pi&#43;%2F&#43;8%29&#43;%2F&#43;2&amp;obj0_params_c=sin%28t&#43;*&#43;pi&#43;-&#43;n&#43;*&#43;pi&#43;%2F&#43;8%29&#43;%2F&#43;2&amp;obj0_params_x=%28%28n&#43;%2F&#43;4&#43;%2B&#43;t&#43;%2F&#43;2%29&#43;%25&#43;4%29&#43;-&#43;2&amp;obj0_params_y=0&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=8&amp;obj0_params_n0=0&amp;obj0_params_n1=15" target="_blank" rel="noopener">Auger</a>
+<p><a href="https://3demos.ctl.columbia.edu/?Y3VycmVudENoYXB0ZXI9SG93K1RvJnNjYWxlPTAmc2hvd1BhbmVsPWZhbHNlJm9iajBfa2luZD12ZWN0b3Imb2JqMF9jb2xvcj0lMjNlYzEzMTMmb2JqMF9hbmltYXRpb249dHJ1ZSZvYmowX3BhcmFtc19hPTAmb2JqMF9wYXJhbXNfYj1jb3MlMjh0KyorcGkrLStuKyorcGkrJTJGKzglMjkrJTJGKzImb2JqMF9wYXJhbXNfYz1zaW4lMjh0KyorcGkrLStuKyorcGkrJTJGKzglMjkrJTJGKzImb2JqMF9wYXJhbXNfeD0lMjglMjhuKyUyRis0KyUyQit0KyUyRisyJTI5KyUyNSs0JTI5Ky0rMiZvYmowX3BhcmFtc195PTAmb2JqMF9wYXJhbXNfej0wJm9iajBfcGFyYW1zX3QwPTAmb2JqMF9wYXJhbXNfdDE9OCZvYmowX3BhcmFtc19uMD0wJm9iajBfcGFyYW1zX24xPTE1" target="_blank" rel="noopener">Auger</a>
 
 <img src="/mvc-labs/lab0/dril.gif" alt="Vectors spinning and traveling"></p>
-<p><a href="https://3demos.ctl.columbia.edu/?currentChapter=How&#43;To&amp;scale=0&amp;showPanel=false&amp;obj0_kind=vector&amp;obj0_color=%23f71302&amp;obj0_animation=true&amp;obj0_params_a=sin%283&#43;t&#43;-&#43;n*&#43;pi&#43;%2F&#43;3%29&amp;obj0_params_b=-cos%283&#43;t&#43;&#43;-&#43;n&#43;*&#43;pi&#43;%2F&#43;3%29&amp;obj0_params_c=0&amp;obj0_params_x=cos%28t&#43;&#43;-&#43;n&#43;*&#43;pi&#43;%2F&#43;3%29&amp;obj0_params_y=sin%28t&#43;-&#43;n&#43;*&#43;pi&#43;%2F&#43;3%29&amp;obj0_params_z=0&amp;obj0_params_t0=0&amp;obj0_params_t1=2&#43;pi&amp;obj0_params_n0=0&amp;obj0_params_n1=5" target="_blank" rel="noopener">Iris</a>
+<p><a href="https://3demos.ctl.columbia.edu/?Y3VycmVudENoYXB0ZXI9SG93K1RvJnNjYWxlPTAmc2hvd1BhbmVsPWZhbHNlJm9iajBfa2luZD12ZWN0b3Imb2JqMF9jb2xvcj0lMjNmNzEzMDImb2JqMF9hbmltYXRpb249dHJ1ZSZvYmowX3BhcmFtc19hPXNpbiUyODMrdCstK24qK3BpKyUyRiszJTI5Jm9iajBfcGFyYW1zX2I9LWNvcyUyODMrdCsrLStuKyorcGkrJTJGKzMlMjkmb2JqMF9wYXJhbXNfYz0wJm9iajBfcGFyYW1zX3g9Y29zJTI4dCsrLStuKyorcGkrJTJGKzMlMjkmb2JqMF9wYXJhbXNfeT1zaW4lMjh0Ky0rbisqK3BpKyUyRiszJTI5Jm9iajBfcGFyYW1zX3o9MCZvYmowX3BhcmFtc190MD0wJm9iajBfcGFyYW1zX3QxPTIrcGkmb2JqMF9wYXJhbXNfbjA9MCZvYmowX3BhcmFtc19uMT01" target="_blank" rel="noopener">Iris</a>
 
 <img src="/mvc-labs/lab0/lens.gif" alt="Vectors parading about the z-axis"></p>
 <p>You may work in groups of up to three (3) students. For full credit, your scene must:</p>
@@ -237,15 +236,15 @@
 </ul>
 <p>You will not be judged on artistry, but it can&rsquo;t hurt.</p>
 <h3 id="how-to-submit">How to Submit</h3>
+<p>Have one (1) student in your group perform the following steps. They can add names of all group members in the process.</p>
 <ul>
 <li>Save your scene as a <code>json</code> file using the button at lower right. <img src="/mvc-labs/lab0/save-as-json.png" alt="Screen shot showing download button."></li>
-<li>Navigate to <a href="https://courseworks2.columbia.edu/" target="_blank" rel="noopener">Courseworks</a>
+<li>Navigate to <a href="https://gradescope.com/" target="_blank" rel="noopener">Gradescope</a>
 </li>
-<li>Go to the People menu item and look for the Lab0 tab.
-<img src="/mvc-labs/lab0/form-groups.png" alt="Screenshot for group selection"></li>
-<li>You should be able to sign up/invite/join a group with up to 3 people.</li>
-<li>Go to Assignments $\rightarrow$ Lab 0.</li>
-<li>Start assignment and submit the <code>json</code> file saved above. Only one group member needs to do this step.</li>
+<li>Go to Lab 0 assignment.</li>
+<li>Start assignment and upload the <code>json</code> file saved above. (Be sure to click &ldquo;Save Answer&rdquo;)</li>
+<li>Click &ldquo;Submit &amp; View Submission&rdquo;.</li>
+<li>On the upper-right, click &ldquo;View or edit group&rdquo; and add all group members.</li>
 </ul>
 <ul class="pa0">
   
@@ -269,7 +268,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://drew.youngren.nyc/mvc-labs/" >
-    &copy;  MVC Labs 2024 
+    &copy;  MVC Labs 2025 
   </a>
     <div>
 <div class="ananke-socials">
